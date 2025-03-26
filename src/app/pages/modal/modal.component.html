@@ -7,6 +7,7 @@
       [src]="thumbnailUrl"
       alt="Capa do livro: {{ livro.title }}"
     >
+
     <section class="info-card">
       <h2 class="titulo">{{ livro.title }}</h2>
       <p class="informacoes">Autoria:</p>
@@ -19,9 +20,15 @@
         <button (click)="lerPrevia()" class="detalhes">Ler prévia</button>
       </div>
     </section>
-    <button (click)="fecharModal()" class="botao-fechar">
+
+    <button
+      (click)="fecharModal()"
+      class="botao-fechar"
+      aria-label="Fechar modal"
+    >
       <span class="material-symbols-outlined">close</span>
     </button>
+
     <section class="sinopse">
       <h3 class="informacoes">Sinopse</h3>
       <p class="resultado">{{ livro.description | slice:0:1000 }}</p>
