@@ -1,4 +1,6 @@
 <dialog
+  cdkTrapFocus
+  cdkTrapFocusAutoCapture="true"
   [open]="statusModal"
   class="container">
   <article class="card">
@@ -22,6 +24,10 @@
           class="detalhes"
           [attr.aria-label]="'Ler prévia do livro' + livro.title"
         > Ler prévia </button>
+
+        <button
+          class="detalhes"
+        > Comprar livro </button>
       </div>
     </section>
 
